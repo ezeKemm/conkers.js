@@ -1,0 +1,26 @@
+{
+  "name": "conkersjs",
+  "version": "1.0.0",
+  "description": "A Discord Bot for managing the Chestnut Cooperative Discord",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsup src/index.ts --minify",
+    "slash": "tsx src/reload-commands.ts"
+  },
+  "author": "Ezekiel Maroclo-Kemmerling",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.17.3",
+    "dotenv": "^16.4.7",
+    "luxon": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.4.2",
+    "tsup": "^8.3.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
