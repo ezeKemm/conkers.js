@@ -2,6 +2,8 @@ import { Client } from "discord.js";
 import { config } from "./config";
 import { commands } from "./commands";
 import { deployCommands } from "./deploy-commands";
+import { getAllReminders } from "./db/pb";
+import { scheduleReminder } from "./scheduleReminder";
 
 const client = new Client({
     intents: ["Guilds", "GuildMessages", "DirectMessages"],
@@ -10,6 +12,14 @@ const client = new Client({
 
 client.once("ready", async () => {
     console.log("Conker is here");
+
+    // Schedule reminders on 'ready' state from database (i.e. in the event of a restart or bootup)
+    // Also will prune database of expired reminders
+    const reminders = await getAllReminders()
+    console.log('Cached reminders: ', reminders)
+    for (const reminder of reminders) {
+        scheduleReminder(client, reminder.id)
+    }
 });
 
 client.on("guildCreate", async (guild) => {

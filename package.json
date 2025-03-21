@@ -15,7 +15,8 @@
   "dependencies": {
     "discord.js": "^14.17.3",
     "dotenv": "^16.4.7",
-    "luxon": "^3.5.0"
+    "luxon": "^3.5.0",
+    "pocketbase": "^0.25.2"
   },
   "devDependencies": {
     "@types/luxon": "^3.4.2",
