@@ -1,6 +1,6 @@
 import { ChatInputCommandInteraction, CommandInteraction, SlashCommandBuilder } from "discord.js";
 import { createReminder } from "../db/pb";
-import { scheduleReminder } from "../scheduleReminder";
+import { scheduleReminder } from "../backend/scheduleReminder";
 
 /** 
  *  A slash command to create an individual reminder in Discord

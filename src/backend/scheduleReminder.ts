@@ -12,7 +12,6 @@ import { today } from "../utils";
  * At the given time, issues a reminder to the target channel.
  * 
  * @param client Discord client instance
- * @param remindAt UNIX Timestamp (in milliseconds) of when Reminder is set to announce
  * @param recordId ID of the corresponding Reminder record in the database
  * @returns 
  */

@@ -1,7 +1,7 @@
 import { CommandInteraction, MessageFlags, SlashCommandBuilder } from "discord.js";
 import { getChannel, getNow, ithDate, today } from "../utils";
 import { createMealReminders, ReminderRecord } from "../db/pb";
-import { scheduleReminder } from "../scheduleReminder";
+import { scheduleReminder } from "../backend/scheduleReminder";
 
 export const data = new SlashCommandBuilder()
     .setName("setmeals")
