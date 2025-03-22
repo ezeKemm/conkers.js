@@ -3,7 +3,7 @@ import { config } from "./config";
 import { commands } from "./commands";
 import { deployCommands } from "./deploy-commands";
 import { getAllReminders } from "./db/pb";
-import { scheduleReminder } from "./scheduleReminder";
+import { scheduleReminder } from "./backend/scheduleReminder";
 
 const client = new Client({
     intents: ["Guilds", "GuildMessages", "DirectMessages"],
@@ -42,4 +42,4 @@ client.on("interactionCreate", async (interaction) => {
     }
 });
 
-client.login(config.DISCORD_TOKEN);
+client.login(config.TOKEN);

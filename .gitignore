@@ -1,8 +1,11 @@
 /node_modules
 /database
-/src/db
+
+/dist/
+/notes/
 
 .env
+.env.dev
 package-lock.json
 test.db
 .DS_Store
