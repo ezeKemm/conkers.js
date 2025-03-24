@@ -3,25 +3,36 @@
   "version": "1.0.0",
   "description": "A Discord Bot for managing the Chestnut Cooperative Discord",
   "main": "index.ts",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/index.ts",
     "start": "node dist/index.js",
     "build": "tsup src/index.ts --minify",
-    "slash": "tsx src/reload-commands.ts"
+    "slash": "tsx src/reload-commands.ts",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write ."
   },
   "author": "Ezekiel Maroclo-Kemmerling",
   "license": "MIT",
   "dependencies": {
     "discord.js": "^14.17.3",
     "dotenv": "^16.4.7",
+    "eslint-plugin-neverthrow": "^1.1.4",
     "luxon": "^3.5.0",
     "pocketbase": "^0.25.2"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.2.7",
+    "@eslint/js": "^9.23.0",
     "@types/luxon": "^3.4.2",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "globals": "^16.0.0",
+    "prettier": "3.5.3",
     "tsup": "^8.3.6",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.28.0"
   }
 }
