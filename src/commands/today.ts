@@ -1,5 +1,5 @@
 import { CommandInteraction, SlashCommandBuilder } from "discord.js";
-import { today } from "../datefuckery";
+import { today } from "../utils";
 
 export const data = new SlashCommandBuilder()
     .setName("today")
@@ -9,5 +9,5 @@ export async function execute(interaction: CommandInteraction) {
 
     const day = today(); 
     console.log(day);
-    return interaction.reply(`Today's date is ${day}`);
+    interaction.reply(`Today's date is ${day}`);
 }
